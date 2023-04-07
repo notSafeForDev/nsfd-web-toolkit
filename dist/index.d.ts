@@ -1,1 +1,1 @@
-export { MathUtil } from "./utils/mathUtil";
+export * from "./utils";
