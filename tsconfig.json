@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+        "module": "esnext",
+		"target": "es2017",
+		"moduleResolution": "node",
+		"strict": true,
+		"noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "skipLibCheck": true,
+		"preserveConstEnums":true,
+        "sourceMap": true,
+        "rootDir": "./",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true
+	}
+}
