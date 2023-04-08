@@ -1,0 +1,1 @@
+export { DomeGeometryGenerator } from "./domeGeometryGenerator";

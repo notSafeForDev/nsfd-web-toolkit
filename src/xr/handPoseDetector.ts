@@ -67,7 +67,6 @@ export type handPoseDetectorPose = {
 export class HandPoseDetector {
 
     /**
-     * 
      * @param handInfo 
      * @param poses 
      * @example 
@@ -82,9 +81,9 @@ export class HandPoseDetector {
                 name: "okay",
                 direction: { fingers: "up", palm: "inwards" },
                 indexFinger: { touches: "thumb" }
-            },
+            }
     ];
-     * @returns 
+     * @returns the hand pose that's detected or undefined
      */
     public static detectPose(handInfo: handPoseDetectorHandInfo, poses: handPoseDetectorPose[]): handPoseDetectorPose | undefined {
         let fingersDirectionName = this.getDirectionName(handInfo.fingersDirection, handInfo.headDirection, handInfo.isLeftHand);
