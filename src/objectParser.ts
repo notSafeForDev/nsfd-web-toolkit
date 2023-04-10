@@ -32,7 +32,7 @@ export class ObjectParser {
      * };
      * @returns the hand pose that's detected or undefined
      */
-    public static parse(object: any, schema: { [key: string]: any } | Object[] | string | Function | boolean, { path = new Array(), output = {}, tracePrefix = "" } = {}): object {
+    public static parse(object: any, schema: { [key: string]: any } | Object[] | string | Function | boolean, { path = new Array(), output = {}, tracePrefix = "" } = {}): any {
         if (schema === true) {
             return object;
         }

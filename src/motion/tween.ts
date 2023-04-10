@@ -13,11 +13,11 @@ type Options = {
  * Simple class for creating tween animations
  */
 export class Tween<T> {
-    private object: { [key: string]: any };
+    private object: T;
     private duration: number;
     private to: Partial<T>;
 
-    private from: { [key: string]: number } = {};
+    private from: Partial<T> = {};
     private elapsedTime: number = 0;
     private haveStarted: boolean = false;
     private delay: number;
@@ -46,7 +46,7 @@ export class Tween<T> {
         tweens.push(this);
     }
 
-    public then(duration: number, to: { [key: string]: number }, options?: Options) {
+    public then(duration: number, to: Partial<T>, options?: Options) {
         options = options || {};
         options.delay = options.delay || 0;
         options.delay += this.duration + this.delay;
@@ -82,9 +82,10 @@ export class Tween<T> {
         progress = this.ease(progress);
 
         for (let key in this.to) {
+            let from = this.from[key];
             let to = this.to[key];
-            if (typeof this.object[key] === "number" && typeof to === "number") {
-                this.object[key] = this.lerp(this.from[key], to, progress);
+            if (typeof this.object[key] === "number" && typeof from === "number" && typeof to === "number") {
+                (this.object[key] as number) = this.lerp(from, to, progress);
             }
         }
 
