@@ -1,11 +1,4 @@
-export type authTemporaryResponse = {
-    token: string,
-    addr: string,
-    agent: string,
-    rtfm: string
-}
-
-export type gifResponse = {
+export type gif = {
     avgColor: string,
     createDate: number,
     duration: number,
@@ -35,7 +28,7 @@ export type gifResponse = {
     width: number
 }
 
-export type nicheResponse = {
+export type niche = {
     cover: string
     description: string
     gifs: number
@@ -46,7 +39,7 @@ export type nicheResponse = {
     thumbnail: string
 }
 
-export type userResponse = {
+export type user = {
     creationtime: number,
     description: string,
     followers: number,
@@ -68,14 +61,21 @@ export type userResponse = {
     views: number
 }
 
+export type authTemporaryResponse = {
+    token: string,
+    addr: string,
+    agent: string,
+    rtfm: string
+}
+
 export type gifsSearchResponse = {
-    gifs: gifResponse[],
-    niches: nicheResponse[],
+    gifs: gif[],
+    niches: niche[],
     page: number,
     pages: number,
     tags: string[],
     total: number,
-    users: userResponse[]
+    users: user[]
 }
 
 export type requestGifsOptions = {

@@ -1,4 +1,4 @@
-import { authTemporaryResponse, requestGifsOptions, gifsSearchResponse } from "../redgifs/redgifsAPITypes";
+import { authTemporaryResponse, requestGifsOptions, gifsSearchResponse } from "./redgifsAPITypes";
 
 export class RedgifsAPI {
 
