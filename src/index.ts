@@ -1,4 +1,5 @@
 export * from "./api";
+export * from "./babylonjs";
 export * from "./geometry";
 export * from "./motion";
 export * from "./utils";
